@@ -1,0 +1,22 @@
+app:
+  name: On The Levels
+  package: price_action_paper_trader
+  environment: local
+
+strategy_lab:
+  paper_review_queue_path: ../openclaw-monster-academy-strategy-lab/runs/paper_review/paper_review_queue.csv
+  paper_watch_journal_path: ../openclaw-monster-academy-strategy-lab/runs/paper_journal/paper_watch_journal.csv
+  allowed_statuses:
+    - READY_FOR_PAPER_REVIEW
+
+safety:
+  broker_action_allowed: false
+  live_trading_allowed: false
+  alpaca_order_submission_allowed: false
+  require_manual_approval: true
+
+runs:
+  order_plans_dir: runs/order_plans
+  paper_journal_dir: runs/paper_journal
+  broker_responses_dir: runs/broker_responses
+  audit_logs_dir: runs/audit_logs

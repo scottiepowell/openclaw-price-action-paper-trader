@@ -1,0 +1,14 @@
+paper_account:
+  provider: alpaca
+  mode: paper
+  enabled: false
+  live_trading_allowed: false
+  order_submission_allowed: false
+
+risk:
+  max_order_notional: null
+  max_open_positions: null
+  allow_fractional: false
+  require_target: true
+  require_invalidation: true
+  require_manual_approval: true
