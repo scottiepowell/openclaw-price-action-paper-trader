@@ -17,7 +17,7 @@
 - [x] Implement read-only loader
 - [ ] Validate required fields
 - [ ] Reject non-ready candidates
-- [ ] Add fixtures from sanitized Strategy Lab outputs
+- [x] Add fixtures from sanitized Strategy Lab outputs
 - [x] Add read-only snapshot import structure
 
 ## Phase 2 — Order-plan generation

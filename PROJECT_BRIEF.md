@@ -58,5 +58,6 @@ The app will eventually produce:
 - Strategy Lab snapshot directory exists.
 - Snapshot contract is documented.
 - Read-only loader scaffold exists.
+- Imported snapshot artifacts are present.
 - No broker execution is enabled.
 - Tests still pass.

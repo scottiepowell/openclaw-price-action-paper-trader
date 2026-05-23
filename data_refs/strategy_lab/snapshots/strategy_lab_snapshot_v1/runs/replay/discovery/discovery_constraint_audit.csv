@@ -1,0 +1,33 @@
+row_type,side,symbol,timestamp,setup_type,prior_level,close,target_hit_after_confirmation,invalidation_hit_after_confirmation,rejection_reason,would_be_useful_coverage,selected_replay_id,score
+selected,bullish,AVGO,2023-05-30T13:30:00+00:00,close_above_resistance,814.98,,,,,true,HR-020,38.73000000000002
+selected,bullish,GOOGL,2023-07-25T20:10:00+00:00,close_above_resistance,123.05,,,,,true,HR-021,7.320000000000007
+selected,bullish,AMZN,2023-08-03T20:00:00+00:00,close_above_resistance,129.36,,,,,true,HR-022,8.23999999999998
+selected,bullish,TSLA,2023-09-11T13:00:00+00:00,close_above_resistance,248.76,,,,,true,HR-023,16.53000000000003
+selected,bullish,MSFT,2023-10-24T20:00:00+00:00,close_above_resistance,331.63,,,,,true,HR-024,14.850000000000023
+selected,bullish,AAPL,2023-12-05T14:30:00+00:00,close_above_resistance,189.65,,,,,true,HR-025,2.530000000000001
+selected,bearish,SPY,2023-07-06T13:15:00+00:00,close_below_support,443.05,,,,,true,HR-026,3.650000000000034
+selected,bearish,IWM,2023-08-08T13:30:00+00:00,close_below_support,193.975,,,,,true,HR-027,2.280000000000001
+selected,bearish,AAPL,2023-09-07T12:35:00+00:00,close_below_support,181.47,,,,,true,HR-028,4.539999999999992
+selected,bearish,QQQ,2023-10-06T12:30:00+00:00,close_below_support,358.38,,,,,true,HR-029,4.060000000000002
+selected,bearish,NVDA,2023-10-17T13:10:00+00:00,close_below_support,459.59,,,,,true,HR-030,14.739999999999952
+selected,bearish,META,2023-12-04T14:30:00+00:00,close_below_support,323.89,,,,,true,HR-031,8.269999999999982
+near_miss,bullish,NVDA,2023-05-18 13:30:00+00:00,close_above_resistance,301.99,305.52,,,avoid_existing_replay_windows,false,,49.1950
+near_miss,bullish,AVGO,2023-05-18 13:35:00+00:00,close_above_resistance,659.77,662.17,,,avoid_existing_replay_windows,false,,38.8850
+near_miss,bullish,AVGO,2023-05-16 13:40:00+00:00,close_above_resistance,640.83,643.79,,,avoid_existing_replay_windows,false,,38.3525
+near_miss,bullish,MSFT,2023-05-16 13:30:00+00:00,close_above_resistance,309.60,312.53,,,avoid_existing_replay_windows,false,,37.4625
+near_miss,bullish,NVDA,2023-05-18 13:35:00+00:00,close_above_resistance,305.91,308.06,,,avoid_existing_replay_windows,false,,30.0550
+near_miss,bearish,META,2023-05-16 13:25:00+00:00,close_below_support,238.15,235.73,,,avoid_existing_replay_windows,false,,29.0850
+near_miss,bullish,AVGO,2023-05-17 13:30:00+00:00,close_above_resistance,646.73,648.76,,,avoid_existing_replay_windows,false,,29.0350
+near_miss,bearish,AVGO,2023-05-16 19:50:00+00:00,close_below_support,644.34,642.30,,,avoid_existing_replay_windows,false,,25.8400
+near_miss,bullish,AVGO,2023-05-18 15:00:00+00:00,close_above_resistance,670.74,672.43,,,avoid_existing_replay_windows,false,,23.6700
+near_miss,bullish,AVGO,2023-05-18 14:05:00+00:00,close_above_resistance,664.23,665.42,,,avoid_existing_replay_windows,false,,22.8850
+near_miss,bullish,TSLA,2023-05-17 13:40:00+00:00,close_above_resistance,168.39,169.74,,,avoid_existing_replay_windows,true,,22.1100
+near_miss,bullish,AVGO,2023-05-18 14:55:00+00:00,close_above_resistance,669.27,670.54,,,avoid_existing_replay_windows,false,,21.6750
+near_miss,bullish,AVGO,2023-05-18 13:45:00+00:00,close_above_resistance,662.17,662.94,,,avoid_existing_replay_windows,false,,20.7075
+near_miss,bullish,AVGO,2023-05-17 15:15:00+00:00,close_above_resistance,653.01,654.53,,,avoid_existing_replay_windows,false,,20.4550
+near_miss,bullish,AVGO,2023-05-15 15:20:00+00:00,close_above_resistance,631.52,632.62,,,avoid_existing_replay_windows,false,,19.9450
+near_miss,bullish,AVGO,2023-05-15 15:10:00+00:00,close_above_resistance,630.60,631.52,,,avoid_existing_replay_windows,false,,19.4850
+near_miss,bullish,AVGO,2023-05-18 14:50:00+00:00,close_above_resistance,668.37,669.27,,,avoid_existing_replay_windows,false,,19.3250
+near_miss,bullish,NVDA,2023-05-16 13:30:00+00:00,close_above_resistance,289.65,290.70,,,avoid_existing_replay_windows,false,,18.6250
+near_miss,bullish,NVDA,2023-05-17 19:45:00+00:00,close_above_resistance,301.42,301.81,,,avoid_existing_replay_windows,false,,17.6900
+near_miss,bullish,AVGO,2023-05-18 13:50:00+00:00,close_above_resistance,663.40,664.05,,,avoid_existing_replay_windows,false,,16.9950

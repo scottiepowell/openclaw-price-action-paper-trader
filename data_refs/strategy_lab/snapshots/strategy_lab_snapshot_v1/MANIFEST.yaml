@@ -1,5 +1,5 @@
 snapshot_name: strategy_lab_snapshot_v1
-source_repo: scottiepowell/openclaw-price-action-paper-trader
+source_repo: scottiepowell/openclaw-monster-academy-strategy-lab
 contract: read_only_import
 artifact_types:
   - replay_evidence_matrix
@@ -9,3 +9,20 @@ artifact_types:
   - artifact_index
   - selected_review_plans
   - selected_replay_cases
+imported_paths:
+  - runs/replay/replay_evidence_matrix.csv
+  - runs/replay/replay_evidence_matrix.md
+  - runs/replay/HR-*_manual_review_packet.md
+  - runs/replay/HR-*_data_quality_report.md
+  - runs/replay/HR-*_triage_summary.md
+  - runs/replay/HR-*_manual_review_decision_sheet.md
+  - runs/replay/replay_batch_summary.md
+  - runs/paper_readiness/paper_readiness_matrix.csv
+  - runs/paper_readiness/paper_readiness_matrix.md
+  - runs/paper_readiness/PTC-*-readiness.md
+  - runs/paper_review/paper_review_queue.csv
+  - runs/paper_review/paper_review_queue.md
+  - runs/paper_review/PTC-*-paper-review-plan.md
+  - runs/paper_journal/paper_watch_journal.csv
+  - runs/paper_journal/paper_watch_journal.md
+  - runs/paper_journal/PTC-*-journal.md

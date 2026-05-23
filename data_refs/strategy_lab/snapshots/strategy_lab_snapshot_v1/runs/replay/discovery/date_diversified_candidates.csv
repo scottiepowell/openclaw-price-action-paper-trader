@@ -1,0 +1,13 @@
+replay_id,symbol,side,timestamp,event_type,prior_level,breakout_or_breakdown_amount,lookback_bars,max_high_next_6_bars,max_high_next_12_bars,max_high_next_24_bars,min_low_next_6_bars,min_low_next_12_bars,min_low_next_24_bars,close_after_6_bars,close_after_12_bars,close_after_24_bars,reason_selected,distance_from_nearest_existing_case_days,has_1d_context
+HR-020,AVGO,bullish,2023-05-30T13:30:00+00:00,close_above_resistance,814.98,38.73000000000002,12,920.0,920.0,920.0,,,,873.825,862.65,863.615,bullish close_above_resistance event,12,true
+HR-021,GOOGL,bullish,2023-07-25T20:10:00+00:00,close_above_resistance,123.05,7.320000000000007,12,130.86,130.96,130.96,,,,130.52,130.25,129.41,bullish close_above_resistance event,6,true
+HR-022,AMZN,bullish,2023-08-03T20:00:00+00:00,close_above_resistance,129.36,8.23999999999998,12,138.71,141.42,142.01,,,,138.38,141.25,140.65,bullish close_above_resistance event,6,true
+HR-023,TSLA,bullish,2023-09-11T13:00:00+00:00,close_above_resistance,248.76,16.53000000000003,12,265.09,265.89,267.01,,,,261.12,264.98,266.875,bullish close_above_resistance event,8,true
+HR-024,MSFT,bullish,2023-10-24T20:00:00+00:00,close_above_resistance,331.63,14.850000000000023,12,346.09,346.09,346.09,,,,344.61,340.45,338.625,bullish close_above_resistance event,6,true
+HR-025,AAPL,bullish,2023-12-05T14:30:00+00:00,close_above_resistance,189.65,2.530000000000001,12,194.28,194.28,194.4,,,,194.16,193.95,193.45,bullish close_above_resistance event,6,true
+HR-026,SPY,bearish,2023-07-06T13:15:00+00:00,close_below_support,443.05,3.650000000000034,12,,,,438.06,437.46,437.07,438.275,437.75,437.38,bearish close_below_support event,8,true
+HR-027,IWM,bearish,2023-08-08T13:30:00+00:00,close_below_support,193.975,2.280000000000001,12,,,,190.93,190.55,190.55,191.18,191.05,191.18,bearish close_below_support event,1,true
+HR-028,AAPL,bearish,2023-09-07T12:35:00+00:00,close_below_support,181.47,4.539999999999992,12,,,,174.55,173.55,173.55,174.55,176.22,176.71,bearish close_below_support event,12,true
+HR-029,QQQ,bearish,2023-10-06T12:30:00+00:00,close_below_support,358.38,4.060000000000002,12,,,,353.81,353.81,353.81,354.51,356.37,358.94,bearish close_below_support event,17,true
+HR-030,NVDA,bearish,2023-10-17T13:10:00+00:00,close_below_support,459.59,14.739999999999952,12,,,,425.08,425.08,425.08,429.96,436.93,441.71,bearish close_below_support event,13,true
+HR-031,META,bearish,2023-12-04T14:30:00+00:00,close_below_support,323.89,8.269999999999982,12,,,,313.83,313.83,313.83,317.92,314.935,316.025,bearish close_below_support event,5,true

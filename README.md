@@ -10,6 +10,7 @@ Python package: `price_action_paper_trader`
 This repo starts at **Phase 1 — read-only Strategy Lab import**.
 
 Phase 1 adds a read-only snapshot import path from Strategy Lab into this repo.
+The v1 snapshot artifacts are now imported into `data_refs/strategy_lab/snapshots/strategy_lab_snapshot_v1/`.
 It still does **not** connect to Alpaca, submit orders, or execute trades.
 
 ## Safety boundary

@@ -1,0 +1,5 @@
+symbol,event_timestamp,prior_support,breakdown_close,downside_target,invalidation_level,target_hit_after_confirmation,invalidation_hit_after_confirmation,min_low_after_confirmation,max_close_after_confirmation,suggested_classification,reason_selected
+TSLA,2023-07-20T13:30:00+00:00,291.06,280.48,269.90,291.06,true,false,194.07,280.48,confirmed_breakdown,strict confirmed bearish breakdown: target hit after confirmation and no invalidation after confirmation
+NVDA,2023-12-19T14:30:00+00:00,500.66,493.00,485.34,500.66,true,false,481.15,499.30,confirmed_breakdown,strict confirmed bearish breakdown: target hit after confirmation and no invalidation after confirmation
+AVGO,2023-12-19T20:35:00+00:00,1141.66,1139.41,1137.16,1141.66,true,false,1109.86,1139.98,confirmed_breakdown,strict confirmed bearish breakdown: target hit after confirmation and no invalidation after confirmation
+META,2023-12-28T19:50:00+00:00,360.58,360.19,359.80,360.58,true,false,351.92,360.19,confirmed_breakdown,strict confirmed bearish breakdown: target hit after confirmation and no invalidation after confirmation
