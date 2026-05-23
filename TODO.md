@@ -12,12 +12,13 @@
 
 ## Phase 1 — Read-only Strategy Lab import
 
-- [ ] Define Strategy Lab queue input contract
-- [ ] Define Strategy Lab journal input contract
-- [ ] Implement read-only loader
+- [x] Define Strategy Lab queue input contract
+- [x] Define Strategy Lab journal input contract
+- [x] Implement read-only loader
 - [ ] Validate required fields
 - [ ] Reject non-ready candidates
 - [ ] Add fixtures from sanitized Strategy Lab outputs
+- [x] Add read-only snapshot import structure
 
 ## Phase 2 — Order-plan generation
 

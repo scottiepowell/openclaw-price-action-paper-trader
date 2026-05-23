@@ -1,0 +1,11 @@
+snapshot_name: strategy_lab_snapshot_v1
+source_repo: scottiepowell/openclaw-price-action-paper-trader
+contract: read_only_import
+artifact_types:
+  - replay_evidence_matrix
+  - paper_readiness_matrix
+  - paper_review_queue
+  - paper_watch_journal
+  - artifact_index
+  - selected_review_plans
+  - selected_replay_cases

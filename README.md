@@ -7,9 +7,10 @@ Python package: `price_action_paper_trader`
 
 ## Current phase
 
-This repo starts at **Phase 0 — scaffold only**.
+This repo starts at **Phase 1 — read-only Strategy Lab import**.
 
-Phase 0 creates the repo structure, documentation, config placeholders, package skeleton, and test harness. It does **not** connect to Alpaca, submit orders, or execute trades.
+Phase 1 adds a read-only snapshot import path from Strategy Lab into this repo.
+It still does **not** connect to Alpaca, submit orders, or execute trades.
 
 ## Safety boundary
 
@@ -26,20 +27,40 @@ At this phase:
 
 Any future paper execution must remain paper-account only, manually approved, risk-gated, and fully journaled.
 
+## Read-only snapshot import
+
+Strategy Lab remains the source of truth. This repo consumes imported snapshots only.
+
+Snapshot root:
+
+```text
+data_refs/strategy_lab/snapshots/strategy_lab_snapshot_v1/
+```
+
+Snapshot contract:
+
+- read-only import only
+- no Strategy Lab writes back
+- no broker execution
+- no Alpaca execution
+- no autonomous trading logic
+
 ## Intended pipeline
 
 ```text
-Strategy Lab outputs
-        ↓
-paper-review queue / journal
-        ↓
-paper-trader app
-        ↓
-paper broker adapter
-        ↓
-Alpaca paper account
-        ↓
-execution journal / audit logs
+Strategy Lab
+  ↓
+Replay evidence
+  ↓
+Paper readiness
+  ↓
+Paper review queue
+  ↓
+Paper Trader app
+  ↓
+Future paper broker adapter
+  ↓
+Execution journal
 ```
 
 ## Initial application layers
@@ -78,7 +99,7 @@ src/price_action_paper_trader/
    Create repo, docs, configs, package skeleton, tests.
 
 2. **Phase 1 — Read-only Strategy Lab import**  
-   Read paper-review queue and journal from Strategy Lab. No broker.
+   Import Strategy Lab snapshot artifacts without broker access.
 
 3. **Phase 2 — Order-plan generation**  
    Convert approved candidates into paper order plans. Still no Alpaca submission.
@@ -118,7 +139,7 @@ all tests pass
 This app should consume Strategy Lab outputs only after they pass the Strategy Lab evidence pipeline:
 
 ```text
-replay evidence → manual review → paper readiness → paper review queue → paper watch journal
+replay evidence → paper readiness → paper review queue → paper watch journal
 ```
 
 This app does not discover strategy candidates and does not make strategy decisions.
