@@ -1,0 +1,1 @@
+simulated_submission_id,approval_id,candidate_id,order_plan_id,symbol,side,simulated_broker_order_id,submission_status,submitted_at,broker_action_allowed,notes,approval_status,approval_scope,risk_gate_status,risk_gate_reason,offline_only_boundary,simulated_only_boundary

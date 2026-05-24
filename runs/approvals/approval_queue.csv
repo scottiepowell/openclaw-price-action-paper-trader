@@ -1,0 +1,12 @@
+approval_id,candidate_id,order_plan_id,symbol,side,approved_by,approved_at,expires_at,approval_status,approval_scope,broker_action_allowed,notes,offline_only_boundary,simulated_only_boundary
+APR-PTC-004,PTC-004,OP-PTC-004,NVDA,bullish,,,,pending,simulated_only,false,manual approval required for simulated-only execution; follow phase 7 boundaries for PTC-004,offline-only,simulated-only
+APR-PTC-005,PTC-005,OP-PTC-005,AVGO,bullish,,,,pending,simulated_only,false,manual approval required for simulated-only execution; follow phase 7 boundaries for PTC-005,offline-only,simulated-only
+APR-PTC-009,PTC-009,OP-PTC-009,IWM,bearish,,,,pending,simulated_only,false,manual approval required for simulated-only execution; follow phase 7 boundaries for PTC-009,offline-only,simulated-only
+APR-PTC-017,PTC-017,OP-PTC-017,SPY,bullish,,,,pending,simulated_only,false,manual approval required for simulated-only execution; follow phase 7 boundaries for PTC-017,offline-only,simulated-only
+APR-PTC-019,PTC-019,OP-PTC-019,SPY,bearish,,,,pending,simulated_only,false,manual approval required for simulated-only execution; follow phase 7 boundaries for PTC-019,offline-only,simulated-only
+APR-PTC-021,PTC-021,OP-PTC-021,GOOGL,bullish,,,,pending,simulated_only,false,manual approval required for simulated-only execution; follow phase 7 boundaries for PTC-021,offline-only,simulated-only
+APR-PTC-022,PTC-022,OP-PTC-022,AMZN,bullish,,,,pending,simulated_only,false,manual approval required for simulated-only execution; follow phase 7 boundaries for PTC-022,offline-only,simulated-only
+APR-PTC-024,PTC-024,OP-PTC-024,MSFT,bullish,,,,pending,simulated_only,false,manual approval required for simulated-only execution; follow phase 7 boundaries for PTC-024,offline-only,simulated-only
+APR-PTC-032,PTC-032,OP-PTC-032,TSLA,bearish,,,,pending,simulated_only,false,manual approval required for simulated-only execution; follow phase 7 boundaries for PTC-032,offline-only,simulated-only
+APR-PTC-034,PTC-034,OP-PTC-034,AVGO,bearish,,,,pending,simulated_only,false,manual approval required for simulated-only execution; follow phase 7 boundaries for PTC-034,offline-only,simulated-only
+APR-PTC-035,PTC-035,OP-PTC-035,META,bearish,,,,pending,simulated_only,false,manual approval required for simulated-only execution; follow phase 7 boundaries for PTC-035,offline-only,simulated-only
