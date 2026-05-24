@@ -22,11 +22,11 @@ Implement an offline-only simulated execution adapter. Live trading remains unsu
 
 ## Phase 5 — Manual approval execution
 
-Submit paper orders only when explicitly approved.
+Record manually approved paper-order intent locally only. No network, no Alpaca, no live broker submission.
 
 ## Phase 6 — Journal reconciliation
 
-Record broker response, fills, target/invalidation outcome, and audit trail.
+Record execution lineage, duplicate/malformed execution records, fills, target/invalidation outcome, and audit trail.
 
 ## Phase 7 — Reporting dashboard/CLI
 

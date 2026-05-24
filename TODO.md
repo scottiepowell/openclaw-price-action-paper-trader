@@ -46,15 +46,19 @@
 
 ## Phase 5 — Manual approval execution
 
-- [ ] Require explicit approval flag
-- [ ] Submit paper orders only
-- [ ] Record broker response
+- [x] Require explicit approval flag
+- [x] Submit paper-order intent only
+- [x] Record broker response locally without network calls
 
 ## Phase 6 — Journal reconciliation
 
-- [ ] Record fills
-- [ ] Record target/invalidation outcome
-- [ ] Reconcile open/closed paper positions
+- [x] Record execution lineage
+- [x] Detect duplicate execution records
+- [x] Detect malformed execution records
+- [x] Record fills
+- [x] Record target/invalidation outcome
+- [x] Reconcile open/closed paper positions
+- [x] Generate audit/reconciliation artifacts
 
 ## Phase 7 — Reporting
 

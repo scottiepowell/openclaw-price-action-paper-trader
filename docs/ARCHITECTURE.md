@@ -17,6 +17,8 @@ SimulatedBrokerAdapter
         ↓
 PaperExecutionService
         ↓
+ExecutionJournalService
+        ↓
 FileJournal / audit logs
 ```
 
@@ -24,7 +26,7 @@ FileJournal / audit logs
 
 ### Domain
 
-Pure objects representing candidates, order plans, risk decisions, and journal records.
+Pure objects representing candidates, order plans, risk decisions, execution records, journal entries, and reconciliation reports.
 
 ### Adapters
 
@@ -34,6 +36,7 @@ External boundary readers/writers:
 - offline simulated execution layer
 - Alpaca paper broker in a future phase
 - local file journal
+- execution journal and reconciliation reports
 
 ### Services
 
@@ -43,6 +46,7 @@ Business workflow:
 - build order plans
 - apply risk gates
 - produce simulated execution records
+- build execution journals and reconciliation reports
 - execute only when explicitly allowed in future phases
 
 ## Broker boundary

@@ -1,0 +1,11 @@
+{
+  "approved_entries": 11,
+  "broker_action_allowed": false,
+  "closed_entries": 0,
+  "duplicate_entries": 0,
+  "malformed_entries": 0,
+  "open_entries": 11,
+  "pending_approval_entries": 0,
+  "rejected_entries": 0,
+  "total_entries": 11
+}

@@ -13,6 +13,7 @@ Phase 1 imported the read-only Strategy Lab snapshot into `data_refs/strategy_la
 Phase 2 converts READY_FOR_PAPER_REVIEW candidates into offline order-plan artifacts only.
 Phase 3 blocks stale, duplicate, unsupported, missing-level, and non-paper-review plans before any execution layer exists.
 Phase 4 adds an offline-only simulated execution layer.
+Phase 5–6 add an offline-only execution journal and reconciliation reporting layer.
 It still does **not** connect to Alpaca, submit orders, or execute trades.
 
 ## Safety boundary
@@ -65,7 +66,7 @@ Paper Trader app
   ↓
 Future paper broker adapter
   ↓
-Execution journal
+Execution journal + reconciliation
 ```
 
 ## Initial application layers
@@ -84,18 +85,22 @@ src/price_action_paper_trader/
     candidate.py
     order_plan.py
     risk.py
+    execution_record.py
+    execution_journal.py
     journal.py
 
   adapters/
     strategy_lab_reader.py
     alpaca_paper_broker.py
     file_journal.py
+    simulated_broker.py
 
   services/
     paper_review_loader.py
     order_plan_builder.py
     risk_gate.py
     paper_execution_service.py
+    execution_journal.py
 ```
 
 ### Phase 2 boundary
