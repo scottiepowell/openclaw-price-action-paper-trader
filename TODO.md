@@ -22,10 +22,11 @@
 
 ## Phase 2 — Order-plan generation
 
-- [ ] Define order plan schema
-- [ ] Convert approved candidates into order plans
-- [ ] Add blocked-order reasons
-- [ ] Keep broker action disabled
+- [x] Define order plan schema
+- [x] Convert approved candidates into order plans
+- [x] Add blocked-order reasons
+- [x] Keep broker action disabled
+- [x] Generate offline order-plan artifacts
 
 ## Phase 3 — Risk gate
 

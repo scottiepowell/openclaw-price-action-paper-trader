@@ -7,10 +7,10 @@ Python package: `price_action_paper_trader`
 
 ## Current phase
 
-This repo starts at **Phase 1 — read-only Strategy Lab import**.
+This repo is in **Phase 2 — offline order-plan generation**.
 
-Phase 1 adds a read-only snapshot import path from Strategy Lab into this repo.
-The v1 snapshot artifacts are now imported into `data_refs/strategy_lab/snapshots/strategy_lab_snapshot_v1/`.
+Phase 1 imported the read-only Strategy Lab snapshot into `data_refs/strategy_lab/snapshots/strategy_lab_snapshot_v1/`.
+Phase 2 converts READY_FOR_PAPER_REVIEW candidates into offline order-plan artifacts only.
 It still does **not** connect to Alpaca, submit orders, or execute trades.
 
 ## Safety boundary
@@ -57,6 +57,8 @@ Paper readiness
   ↓
 Paper review queue
   ↓
+Offline order-plan generation
+  ↓
 Paper Trader app
   ↓
 Future paper broker adapter
@@ -93,6 +95,14 @@ src/price_action_paper_trader/
     risk_gate.py
     paper_execution_service.py
 ```
+
+### Phase 2 boundary
+
+- order plans are offline planning records only
+- `broker_action_allowed` stays `false`
+- no live price lookup
+- no order IDs, fills, or execution timestamps
+- no broker submission path
 
 ## Development phases
 

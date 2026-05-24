@@ -34,9 +34,10 @@ The app depends on Strategy Lab artifacts such as read-only snapshots of:
 
 ## Downstream outputs
 
-The app will eventually produce:
+The app will produce:
 
-- order plan files
+- offline order plan files
+- order-plan queue summaries
 - risk gate decisions
 - paper broker request records
 - broker response records
@@ -61,3 +62,11 @@ The app will eventually produce:
 - Imported snapshot artifacts are present.
 - No broker execution is enabled.
 - Tests still pass.
+
+## Phase 2 success criteria
+
+- READY_FOR_PAPER_REVIEW candidates generate offline order plans.
+- Blocked candidates do not generate plans.
+- Order-plan artifacts are written under `runs/order_plans/`.
+- `broker_action_allowed` remains `false` everywhere.
+- `plan_status` remains `DRAFT` for every generated plan.

@@ -1,0 +1,12 @@
+candidate_id,symbol,side,classification,entry_reference,target_price,invalidation_level,risk_notes,plan_status,snapshot_source,broker_action_allowed,created_at_utc
+PTC-004,NVDA,bullish,confirmed_breakout,305.52,309.05,298.46,await human approval; do not submit orders,DRAFT,data_refs/strategy_lab/snapshots/strategy_lab_snapshot_v1,false,2026-05-24T00:17:22.554108+00:00
+PTC-005,AVGO,bullish,confirmed_breakout,662.17,664.58,657.37,await human approval; do not submit orders,DRAFT,data_refs/strategy_lab/snapshots/strategy_lab_snapshot_v1,false,2026-05-24T00:17:22.554126+00:00
+PTC-009,IWM,bearish,confirmed_breakdown,173.69,172.66,175.75,await human approval; do not submit orders,DRAFT,data_refs/strategy_lab/snapshots/strategy_lab_snapshot_v1,false,2026-05-24T00:17:22.554134+00:00
+PTC-017,SPY,bullish,confirmed_breakout,446.56,447.37,444.91,await human approval; do not submit orders,DRAFT,data_refs/strategy_lab/snapshots/strategy_lab_snapshot_v1,false,2026-05-24T00:17:22.554140+00:00
+PTC-019,SPY,bearish,confirmed_breakdown,442.75,442.18,444.18,await human approval; do not submit orders,DRAFT,data_refs/strategy_lab/snapshots/strategy_lab_snapshot_v1,false,2026-05-24T00:17:22.554145+00:00
+PTC-021,GOOGL,bullish,confirmed_breakout,123.22,125.12,120.93,await human approval; do not submit orders,DRAFT,data_refs/strategy_lab/snapshots/strategy_lab_snapshot_v1,false,2026-05-24T00:17:22.554150+00:00
+PTC-022,AMZN,bullish,confirmed_breakout,129.92,131.82,126.34,await human approval; do not submit orders,DRAFT,data_refs/strategy_lab/snapshots/strategy_lab_snapshot_v1,false,2026-05-24T00:17:22.554155+00:00
+PTC-024,MSFT,bullish,confirmed_breakout,331.90,333.80,327.50,await human approval; do not submit orders,DRAFT,data_refs/strategy_lab/snapshots/strategy_lab_snapshot_v1,false,2026-05-24T00:17:22.554160+00:00
+PTC-032,TSLA,bearish,confirmed_breakdown,280.48,269.90,301.64,await human approval; do not submit orders,DRAFT,data_refs/strategy_lab/snapshots/strategy_lab_snapshot_v1,false,2026-05-24T00:17:22.554165+00:00
+PTC-034,AVGO,bearish,confirmed_breakdown,1139.41,1137.16,1143.91,await human approval; do not submit orders,DRAFT,data_refs/strategy_lab/snapshots/strategy_lab_snapshot_v1,false,2026-05-24T00:17:22.554169+00:00
+PTC-035,META,bearish,confirmed_breakdown,360.19,359.58,361.58,await human approval; do not submit orders,DRAFT,data_refs/strategy_lab/snapshots/strategy_lab_snapshot_v1,false,2026-05-24T00:17:22.554174+00:00
