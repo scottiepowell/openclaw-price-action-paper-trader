@@ -5,6 +5,19 @@ paper_account:
   live_trading_allowed: false
   order_submission_allowed: false
 
+broker:
+  provider: alpaca
+  mode: paper
+  enabled: false
+  allow_live_trading: false
+  require_manual_approval: true
+  submit_orders: false
+  broker_action_allowed_default: false
+  required_env_vars:
+    - ALPACA_PAPER_API_KEY
+    - ALPACA_PAPER_SECRET_KEY
+    - ALPACA_PAPER_BASE_URL
+
 risk:
   max_order_notional: null
   max_open_positions: null

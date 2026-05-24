@@ -11,6 +11,9 @@ ROOT = Path(__file__).resolve().parents[2]
 def test_default_config_blocks_broker_action():
     config = load_yaml_config(ROOT / "configs" / "default.yaml")
     assert broker_action_allowed(config) is False
+    assert config["broker"]["enabled"] is False
+    assert config["broker"]["submit_orders"] is False
+    assert config["broker"]["broker_action_allowed_default"] is False
 
 
 def test_paper_config_keeps_order_submission_disabled():
@@ -18,6 +21,9 @@ def test_paper_config_keeps_order_submission_disabled():
     assert config["paper_account"]["enabled"] is False
     assert config["paper_account"]["order_submission_allowed"] is False
     assert config["paper_account"]["live_trading_allowed"] is False
+    assert config["broker"]["enabled"] is False
+    assert config["broker"]["allow_live_trading"] is False
+    assert config["broker"]["submit_orders"] is False
 
 
 def test_phase0_execution_service_blocks_broker_action():

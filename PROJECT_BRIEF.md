@@ -4,7 +4,7 @@
 
 **On The Levels** is a paper-trading application for manually approved price-action candidates produced by the Price Action Strategy Lab.
 
-Its job is to consume read-only Strategy Lab snapshots and eventually convert validated outputs into paper-review plans, risk-gated order plans, paper-account actions, and execution/audit journals.
+Its job is to consume read-only Strategy Lab snapshots and eventually convert validated outputs into paper-review plans, risk-gated order plans, paper-account actions, broker safety decisions, and execution/audit journals.
 
 ## Repository identity
 
@@ -31,6 +31,7 @@ The app depends on Strategy Lab artifacts such as read-only snapshots of:
 - paper-readiness matrix
 - approved candidate plan files
 - replay evidence matrix
+- manual approval records
 
 ## Downstream outputs
 
@@ -43,6 +44,7 @@ The app will produce:
 - simulated broker request records
 - simulated broker response records
 - execution journal entries
+- broker safety validation results
 - audit logs
 
 ## Phase 0 success criteria
@@ -87,3 +89,12 @@ The app will produce:
 - Simulated execution artifacts are written under `runs/simulated_execution/`.
 - `broker_action_allowed` remains `false` everywhere.
 - No network, Alpaca, or requests/http client dependency is introduced.
+
+## Phase 6 success criteria
+
+- Broker interface is defined without network calls.
+- Alpaca paper adapter exists as a disabled scaffold.
+- Manual approval model exists and defaults to `NOT_APPROVED`.
+- Broker safety gate blocks submission by default.
+- `broker_action_allowed` remains `false` by default.
+- No live trading endpoint is enabled.

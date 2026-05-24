@@ -50,7 +50,16 @@
 - [x] Submit paper-order intent only
 - [x] Record broker response locally without network calls
 
-## Phase 6 — Journal reconciliation
+## Phase 6 — Alpaca paper adapter scaffold
+
+- [x] Define broker interface
+- [x] Add manual approval model
+- [x] Add disabled-by-default Alpaca scaffold
+- [x] Add broker safety gate
+- [x] Add paper-only config defaults
+- [x] Keep `broker_action_allowed` false by default
+
+## Phase 7 — Journal reconciliation
 
 - [x] Record execution lineage
 - [x] Detect duplicate execution records
@@ -60,7 +69,7 @@
 - [x] Reconcile open/closed paper positions
 - [x] Generate audit/reconciliation artifacts
 
-## Phase 7 — Reporting
+## Phase 8 — Reporting
 
 - [ ] CLI summary
 - [ ] Paper outcome report

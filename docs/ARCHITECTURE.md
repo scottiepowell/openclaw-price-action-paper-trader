@@ -19,6 +19,10 @@ PaperExecutionService
         ↓
 ExecutionJournalService
         ↓
+BrokerInterface + BrokerSafetyGate
+        ↓
+Disabled AlpacaPaperBroker scaffold
+        ↓
 FileJournal / audit logs
 ```
 
@@ -34,6 +38,7 @@ External boundary readers/writers:
 
 - Strategy Lab files
 - offline simulated execution layer
+- broker interface
 - Alpaca paper broker in a future phase
 - local file journal
 - execution journal and reconciliation reports
@@ -47,6 +52,7 @@ Business workflow:
 - apply risk gates
 - produce simulated execution records
 - build execution journals and reconciliation reports
+- validate broker config and manual approval gates
 - execute only when explicitly allowed in future phases
 
 ## Broker boundary
@@ -58,3 +64,4 @@ No adapter may submit broker orders unless all of these are true in a future app
 - manual approval is present
 - risk gate passes
 - audit logging is active
+- broker safety gate passes

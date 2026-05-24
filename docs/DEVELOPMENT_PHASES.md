@@ -20,13 +20,13 @@ Block unsafe or incomplete plans before any paper execution layer exists.
 
 Implement an offline-only simulated execution adapter. Live trading remains unsupported and Alpaca stays out of scope.
 
-## Phase 5 — Manual approval execution
-
-Record manually approved paper-order intent locally only. No network, no Alpaca, no live broker submission.
-
-## Phase 6 — Journal reconciliation
+## Phase 5 — Journal reconciliation
 
 Record execution lineage, duplicate/malformed execution records, fills, target/invalidation outcome, and audit trail.
+
+## Phase 6 — Alpaca paper adapter scaffold
+
+Add a disabled-by-default, paper-only broker interface and safety gate. No submissions yet.
 
 ## Phase 7 — Reporting dashboard/CLI
 
