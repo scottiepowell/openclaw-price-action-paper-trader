@@ -1,0 +1,24 @@
+record_type,overall_status,approval_id,candidate_id,order_plan_id,symbol,side,approval_status,approval_scope,broker_action_allowed,expires_at,expected_path,found,simulated_submission_id,simulated_broker_order_id,submission_status,submitted_at,audit_status,audit_notes
+summary,warning,,,,,,,,,,,,,,,,,
+approval,,APR-PTC-004,PTC-004,OP-PTC-004,NVDA,bullish,pending,simulated_only,false,,,,,,,,pass,pending approval is acceptable
+approval,,APR-PTC-005,PTC-005,OP-PTC-005,AVGO,bullish,pending,simulated_only,false,,,,,,,,pass,pending approval is acceptable
+approval,,APR-PTC-009,PTC-009,OP-PTC-009,IWM,bearish,pending,simulated_only,false,,,,,,,,pass,pending approval is acceptable
+approval,,APR-PTC-017,PTC-017,OP-PTC-017,SPY,bullish,pending,simulated_only,false,,,,,,,,pass,pending approval is acceptable
+approval,,APR-PTC-019,PTC-019,OP-PTC-019,SPY,bearish,pending,simulated_only,false,,,,,,,,pass,pending approval is acceptable
+approval,,APR-PTC-021,PTC-021,OP-PTC-021,GOOGL,bullish,pending,simulated_only,false,,,,,,,,pass,pending approval is acceptable
+approval,,APR-PTC-022,PTC-022,OP-PTC-022,AMZN,bullish,pending,simulated_only,false,,,,,,,,pass,pending approval is acceptable
+approval,,APR-PTC-024,PTC-024,OP-PTC-024,MSFT,bullish,pending,simulated_only,false,,,,,,,,pass,pending approval is acceptable
+approval,,APR-PTC-032,PTC-032,OP-PTC-032,TSLA,bearish,pending,simulated_only,false,,,,,,,,pass,pending approval is acceptable
+approval,,APR-PTC-034,PTC-034,OP-PTC-034,AVGO,bearish,pending,simulated_only,false,,,,,,,,pass,pending approval is acceptable
+approval,,APR-PTC-035,PTC-035,OP-PTC-035,META,bearish,pending,simulated_only,false,,,,,,,,pass,pending approval is acceptable
+compatibility,,APR-PTC-004,PTC-004,,,,pending,simulated_only,false,,/home/scott/projects/openclaw-price-action-paper-trader/runs/approvals/PTC-004-approval.md,true,,,,,pass,compatibility file matches expected safe fields
+compatibility,,APR-PTC-005,PTC-005,,,,pending,simulated_only,false,,/home/scott/projects/openclaw-price-action-paper-trader/runs/approvals/PTC-005-approval.md,true,,,,,pass,compatibility file matches expected safe fields
+compatibility,,APR-PTC-009,PTC-009,,,,pending,simulated_only,false,,/home/scott/projects/openclaw-price-action-paper-trader/runs/approvals/PTC-009-approval.md,true,,,,,pass,compatibility file matches expected safe fields
+compatibility,,APR-PTC-017,PTC-017,,,,pending,simulated_only,false,,/home/scott/projects/openclaw-price-action-paper-trader/runs/approvals/PTC-017-approval.md,true,,,,,pass,compatibility file matches expected safe fields
+compatibility,,APR-PTC-019,PTC-019,,,,pending,simulated_only,false,,/home/scott/projects/openclaw-price-action-paper-trader/runs/approvals/PTC-019-approval.md,true,,,,,pass,compatibility file matches expected safe fields
+compatibility,,APR-PTC-021,PTC-021,,,,pending,simulated_only,false,,/home/scott/projects/openclaw-price-action-paper-trader/runs/approvals/PTC-021-approval.md,true,,,,,pass,compatibility file matches expected safe fields
+compatibility,,APR-PTC-022,PTC-022,,,,pending,simulated_only,false,,/home/scott/projects/openclaw-price-action-paper-trader/runs/approvals/PTC-022-approval.md,true,,,,,pass,compatibility file matches expected safe fields
+compatibility,,APR-PTC-024,PTC-024,,,,pending,simulated_only,false,,/home/scott/projects/openclaw-price-action-paper-trader/runs/approvals/PTC-024-approval.md,true,,,,,pass,compatibility file matches expected safe fields
+compatibility,,APR-PTC-032,PTC-032,,,,pending,simulated_only,false,,/home/scott/projects/openclaw-price-action-paper-trader/runs/approvals/PTC-032-approval.md,true,,,,,pass,compatibility file matches expected safe fields
+compatibility,,APR-PTC-034,PTC-034,,,,pending,simulated_only,false,,/home/scott/projects/openclaw-price-action-paper-trader/runs/approvals/PTC-034-approval.md,true,,,,,pass,compatibility file matches expected safe fields
+compatibility,,APR-PTC-035,PTC-035,,,,pending,simulated_only,false,,/home/scott/projects/openclaw-price-action-paper-trader/runs/approvals/PTC-035-approval.md,true,,,,,pass,compatibility file matches expected safe fields

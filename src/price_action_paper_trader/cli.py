@@ -13,6 +13,7 @@ from price_action_paper_trader.services.manual_approval_service import (
     load_manual_approval_queue,
     validate_manual_approvals,
 )
+from price_action_paper_trader.services.approval_audit_report_service import generate_approval_audit_report
 from price_action_paper_trader.services.order_plan_builder import build_order_plans
 from price_action_paper_trader.services.simulated_submission_service import (
     SIMULATED_SUBMITTED,
@@ -30,6 +31,7 @@ def _build_parser() -> argparse.ArgumentParser:
 
     approvals_subparsers.add_parser("list", help="list manual approval templates")
     approvals_subparsers.add_parser("validate", help="validate manual approval templates")
+    approvals_subparsers.add_parser("audit-report", help="generate read-only approval audit report")
 
     submit_parser = approvals_subparsers.add_parser(
         "submit-simulated",
@@ -80,6 +82,24 @@ def main(argv: list[str] | None = None) -> int:
                 print(issue)
             return 1
         print(json.dumps({"status": "ok", "count": len(approvals)}))
+        return 0
+
+    if args.approvals_command == "audit-report":
+        report = generate_approval_audit_report()
+        print(
+            json.dumps(
+                {
+                    "status": report["overall_status"],
+                    "total_approvals": report["total_approvals"],
+                    "expected_compatibility_files": report["expected_compatibility_files"],
+                    "found_compatibility_files": report["found_compatibility_files"],
+                    "total_simulated_submissions": report["total_simulated_submissions"],
+                    "queue_markdown": str(report["queue_markdown"]),
+                    "queue_csv": str(report["queue_csv"]),
+                },
+                indent=2,
+            )
+        )
         return 0
 
     if args.approvals_command == "submit-simulated":
