@@ -51,6 +51,7 @@ def build_order_plan(candidate_row: dict[str, Any], readiness_row: dict[str, Any
         target_price=target_price,
         invalidation_level=invalidation_level,
         risk_notes=risk_notes,
+        readiness_status=str(readiness_row.get("readiness_status") or ""),
         plan_status=PLAN_STATUS,
         snapshot_source=_snapshot_source(snapshot_root),
         broker_action_allowed=False,
@@ -115,6 +116,7 @@ def _write_csv_queue(plans: list[OrderPlan], output_root: Path) -> Path:
         "target_price",
         "invalidation_level",
         "risk_notes",
+        "readiness_status",
         "plan_status",
         "snapshot_source",
         "broker_action_allowed",
@@ -147,6 +149,7 @@ def _write_plan_documents(plans: list[OrderPlan], output_root: Path) -> list[Pat
                     f"- Target price: {plan.target_price:.2f}",
                     f"- Invalidation level: {plan.invalidation_level:.2f}",
                     f"- Read-only risk notes: {plan.risk_notes}",
+                    f"- Readiness status: {plan.readiness_status}",
                     f"- Plan status: {plan.plan_status}",
                     f"- Snapshot source: {plan.snapshot_source}",
                     f"- Broker action allowed: {str(plan.broker_action_allowed).lower()}",
@@ -174,4 +177,3 @@ def generate_order_plan_artifacts(snapshot_root: str | Path | None = None, outpu
         "queue_csv": csv_path,
         "plan_documents": plan_paths,
     }
-

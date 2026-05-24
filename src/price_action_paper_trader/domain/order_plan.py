@@ -15,6 +15,7 @@ class OrderPlan:
     target_price: float
     invalidation_level: float
     risk_notes: str
+    readiness_status: str = ""
     plan_status: str = "DRAFT"
     snapshot_source: str = ""
     broker_action_allowed: bool = False

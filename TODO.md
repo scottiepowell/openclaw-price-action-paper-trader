@@ -30,12 +30,12 @@
 
 ## Phase 3 — Risk gate
 
-- [ ] Define risk limits
-- [ ] Block stale candidates
-- [ ] Block duplicates
-- [ ] Block missing target/invalidation
-- [ ] Block unsupported symbols
-- [ ] Block non-paper-review candidates
+- [x] Define risk limits
+- [x] Block stale candidates
+- [x] Block duplicates
+- [x] Block missing target/invalidation
+- [x] Block unsupported symbols
+- [x] Block non-paper-review candidates
 
 ## Phase 4 — Alpaca paper adapter
 

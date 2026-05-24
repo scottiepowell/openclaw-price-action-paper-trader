@@ -70,3 +70,11 @@ The app will produce:
 - Order-plan artifacts are written under `runs/order_plans/`.
 - `broker_action_allowed` remains `false` everywhere.
 - `plan_status` remains `DRAFT` for every generated plan.
+
+## Phase 3 success criteria
+
+- Risk gate blocks stale plans.
+- Risk gate blocks duplicate plans.
+- Risk gate blocks missing target or invalidation levels.
+- Risk gate blocks unsupported symbols.
+- Risk gate blocks non-paper-review candidates.

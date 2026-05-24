@@ -8,6 +8,7 @@
 - Target price: 447.37
 - Invalidation level: 444.91
 - Read-only risk notes: await human approval; do not submit orders
+- Readiness status: READY_FOR_PAPER_REVIEW
 - Plan status: DRAFT
 - Snapshot source: data_refs/strategy_lab/snapshots/strategy_lab_snapshot_v1
 - Broker action allowed: false
