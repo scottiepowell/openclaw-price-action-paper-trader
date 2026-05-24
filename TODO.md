@@ -37,12 +37,12 @@
 - [x] Block unsupported symbols
 - [x] Block non-paper-review candidates
 
-## Phase 4 — Alpaca paper adapter
+## Phase 4 — Simulated broker adapter
 
-- [ ] Design adapter interface
-- [ ] Add paper-only config checks
-- [ ] Implement dry-run broker adapter first
-- [ ] Add Alpaca paper adapter only after approval
+- [x] Design adapter interface
+- [x] Add paper-only config checks
+- [x] Implement dry-run broker adapter first
+- [x] Keep Alpaca adapter isolated for a future phase
 
 ## Phase 5 — Manual approval execution
 

@@ -39,8 +39,9 @@ The app will produce:
 - offline order plan files
 - order-plan queue summaries
 - risk gate decisions
-- paper broker request records
-- broker response records
+- simulated execution records
+- simulated broker request records
+- simulated broker response records
 - execution journal entries
 - audit logs
 
@@ -78,3 +79,11 @@ The app will produce:
 - Risk gate blocks missing target or invalidation levels.
 - Risk gate blocks unsupported symbols.
 - Risk gate blocks non-paper-review candidates.
+
+## Phase 4 success criteria
+
+- Simulated broker adapter accepts only risk-approved plans.
+- Blocked and malformed plans are rejected.
+- Simulated execution artifacts are written under `runs/simulated_execution/`.
+- `broker_action_allowed` remains `false` everywhere.
+- No network, Alpaca, or requests/http client dependency is introduced.

@@ -7,11 +7,12 @@ Python package: `price_action_paper_trader`
 
 ## Current phase
 
-This repo is in **Phase 3 — risk gate**.
+This repo is in **Phase 4 — simulated broker adapter**.
 
 Phase 1 imported the read-only Strategy Lab snapshot into `data_refs/strategy_lab/snapshots/strategy_lab_snapshot_v1/`.
 Phase 2 converts READY_FOR_PAPER_REVIEW candidates into offline order-plan artifacts only.
 Phase 3 blocks stale, duplicate, unsupported, missing-level, and non-paper-review plans before any execution layer exists.
+Phase 4 adds an offline-only simulated execution layer.
 It still does **not** connect to Alpaca, submit orders, or execute trades.
 
 ## Safety boundary
@@ -119,8 +120,8 @@ src/price_action_paper_trader/
 4. **Phase 3 — Risk gate**  
    Block stale, duplicate, unsupported, missing-target, missing-invalidation, or non-paper-review candidates.
 
-5. **Phase 4 — Paper broker adapter**  
-   Connect to Alpaca paper account only. No live trading support.
+5. **Phase 4 — Simulated broker adapter**  
+   Build offline-only simulated execution records. No network, no broker.
 
 6. **Phase 5 — Manual approval execution**  
    Submit paper orders only when explicitly approved.

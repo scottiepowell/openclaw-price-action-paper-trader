@@ -16,9 +16,9 @@ Convert approved candidates into local order plans. Still no broker.
 
 Block unsafe or incomplete plans before any paper execution layer exists.
 
-## Phase 4 — Paper broker adapter
+## Phase 4 — Simulated broker adapter
 
-Implement Alpaca paper account adapter only. Live trading remains unsupported.
+Implement an offline-only simulated execution adapter. Live trading remains unsupported and Alpaca stays out of scope.
 
 ## Phase 5 — Manual approval execution
 

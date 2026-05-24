@@ -13,9 +13,9 @@ OrderPlanBuilder
         ↓
 RiskGate
         ↓
-PaperExecutionService
+SimulatedBrokerAdapter
         ↓
-PaperBrokerAdapter
+PaperExecutionService
         ↓
 FileJournal / audit logs
 ```
@@ -31,6 +31,7 @@ Pure objects representing candidates, order plans, risk decisions, and journal r
 External boundary readers/writers:
 
 - Strategy Lab files
+- offline simulated execution layer
 - Alpaca paper broker in a future phase
 - local file journal
 
@@ -41,6 +42,7 @@ Business workflow:
 - load paper-review candidates
 - build order plans
 - apply risk gates
+- produce simulated execution records
 - execute only when explicitly allowed in future phases
 
 ## Broker boundary
