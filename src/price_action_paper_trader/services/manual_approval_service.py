@@ -161,6 +161,35 @@ def _write_template_documents(approvals: Sequence[ApprovalArtifact], output_root
     return paths
 
 
+def _write_compatibility_documents(approvals: Sequence[ApprovalArtifact], output_root: Path) -> list[Path]:
+    output_root.mkdir(parents=True, exist_ok=True)
+    paths: list[Path] = []
+    for approval in approvals:
+        path = output_root / f"{approval.candidate_id}-approval.md"
+        path.write_text(
+            "\n".join(
+                [
+                    f"# {approval.candidate_id} Approval Compatibility File",
+                    "",
+                    f"- Approval ID: {approval.approval_id}",
+                    f"- Candidate ID: {approval.candidate_id}",
+                    f"- Order plan ID: {approval.order_plan_id}",
+                    f"- Symbol: {approval.symbol}",
+                    f"- Side: {approval.side}",
+                    f"- Approval status: {approval.approval_status}",
+                    f"- Approval scope: {approval.approval_scope}",
+                    f"- Broker action allowed: {str(approval.broker_action_allowed).lower()}",
+                    "",
+                    "This compatibility artifact is offline-only and simulated-only.",
+                ]
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+        paths.append(path)
+    return paths
+
+
 def _write_readme(output_root: Path) -> Path:
     output_root.mkdir(parents=True, exist_ok=True)
     path = output_root / "README.md"
@@ -192,6 +221,7 @@ def generate_manual_approval_artifacts(
     md_path = _write_markdown_queue(approvals, output_root_path)
     csv_path = _write_csv_queue(approvals, output_root_path)
     template_paths = _write_template_documents(approvals, output_root_path)
+    compatibility_paths = _write_compatibility_documents(approvals, output_root_path)
     readme_path = _write_readme(output_root_path)
     return {
         "count": len(approvals),
@@ -199,6 +229,7 @@ def generate_manual_approval_artifacts(
         "queue_markdown": md_path,
         "queue_csv": csv_path,
         "template_documents": template_paths,
+        "compatibility_documents": compatibility_paths,
         "readme": readme_path,
     }
 

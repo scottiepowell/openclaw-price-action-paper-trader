@@ -66,6 +66,10 @@ def test_generate_manual_approval_artifacts_writes_queue(tmp_path):
     assert report["readme"].is_file()
     assert len(report["template_documents"]) == 11
     assert all(path.is_file() for path in report["template_documents"])
+    assert len(report["compatibility_documents"]) == 11
+    assert all(path.is_file() for path in report["compatibility_documents"])
+    assert (tmp_path / "PTC-004-approval.md").is_file()
+    assert (tmp_path / "PTC-035-approval.md").is_file()
 
 
 def test_validate_manual_approvals_is_clean():
