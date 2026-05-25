@@ -287,6 +287,7 @@ def _write_markdown(report: ApprovalAuditReport, output_root: Path) -> Path:
         f"- Approvals with approval_scope != simulated_only: {report.approvals_with_unsafe_scope}",
         f"- Approvals with broker_action_allowed != false: {report.approvals_with_unsafe_broker_flag}",
         f"- Simulated submissions with broker_action_allowed != false: {report.simulated_submissions_with_unsafe_broker_flag}",
+        f"- Conservative warning reason: {'pending approvals remain in the queue' if report.pending_approvals > 0 else 'none'}",
         "",
         "## Approval Queue Audit",
         "",
@@ -463,6 +464,8 @@ def _build_report(
     ]
     if any(fail_conditions):
         overall_status = "fail"
+    elif pending_approvals > 0:
+        overall_status = "warning"
     elif not simulated_submission_rows:
         overall_status = "warning"
     elif any(row.audit_status == "warning" for row in approval_rows):

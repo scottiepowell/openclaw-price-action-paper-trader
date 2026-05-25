@@ -38,7 +38,7 @@ def _plan() -> OrderPlan:
         plan_status="DRAFT",
         snapshot_source="data_refs/strategy_lab/snapshots/strategy_lab_snapshot_v1",
         broker_action_allowed=False,
-        created_at_utc="2026-05-24T09:44:00+00:00",
+        created_at_utc=datetime.now(timezone.utc).isoformat(),
     )
 
 

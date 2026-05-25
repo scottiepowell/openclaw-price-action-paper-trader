@@ -1,1 +1,2 @@
 simulated_submission_id,approval_id,candidate_id,order_plan_id,symbol,side,simulated_broker_order_id,submission_status,submitted_at,broker_action_allowed,notes,approval_status,approval_scope,risk_gate_status,risk_gate_reason,offline_only_boundary,simulated_only_boundary
+SS-APR-PTC-004-514ACD1054A0,APR-PTC-004,PTC-004,OP-PTC-004,NVDA,bullish,SIM-BROKER-PTC-004-6C52AADE56D6,SIMULATED_SUBMITTED,2026-05-25T23:06:59.189552+00:00,false,offline simulation only; submitted without fills,approved,simulated_only,PASSED,plan passed Phase 3 risk gate,offline-only,simulated-only

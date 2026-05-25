@@ -50,6 +50,7 @@ def test_generate_report_writes_markdown_and_csv(tmp_path):
     assert "## Compatibility File Audit" in md_text
     assert "## Simulated Submission Audit" in md_text
     assert "## Safety Boundary Audit" in md_text
+    assert "Conservative warning reason: pending approvals remain in the queue" in md_text
     assert "record_type,overall_status,approval_id,candidate_id,order_plan_id,symbol,side,approval_status,approval_scope,broker_action_allowed,expires_at,expected_path,found,simulated_submission_id,simulated_broker_order_id,submission_status,submitted_at,audit_status,audit_notes" in csv_text
 
 

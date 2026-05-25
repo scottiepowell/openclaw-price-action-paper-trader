@@ -22,3 +22,4 @@ compatibility,,APR-PTC-024,PTC-024,,,,pending,simulated_only,false,,/home/scott/
 compatibility,,APR-PTC-032,PTC-032,,,,pending,simulated_only,false,,/home/scott/projects/openclaw-price-action-paper-trader/runs/approvals/PTC-032-approval.md,true,,,,,pass,compatibility file matches expected safe fields
 compatibility,,APR-PTC-034,PTC-034,,,,pending,simulated_only,false,,/home/scott/projects/openclaw-price-action-paper-trader/runs/approvals/PTC-034-approval.md,true,,,,,pass,compatibility file matches expected safe fields
 compatibility,,APR-PTC-035,PTC-035,,,,pending,simulated_only,false,,/home/scott/projects/openclaw-price-action-paper-trader/runs/approvals/PTC-035-approval.md,true,,,,,pass,compatibility file matches expected safe fields
+simulated_submission,,APR-PTC-004,PTC-004,OP-PTC-004,NVDA,bullish,,,false,,,,SS-APR-PTC-004-514ACD1054A0,SIM-BROKER-PTC-004-6C52AADE56D6,SIMULATED_SUBMITTED,2026-05-25T23:06:59.189552+00:00,pass,simulated submission record is present

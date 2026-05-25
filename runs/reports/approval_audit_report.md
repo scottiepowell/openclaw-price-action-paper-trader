@@ -8,7 +8,7 @@ Read-only audit report for manual approvals and simulated submissions.
 - Total approvals: 11
 - Total compatibility approval files expected: 11
 - Total compatibility approval files found: 11
-- Total simulated submissions: 0
+- Total simulated submissions: 1
 - Pending approvals: 11
 - Approved approvals: 0
 - Rejected approvals: 0
@@ -17,6 +17,7 @@ Read-only audit report for manual approvals and simulated submissions.
 - Approvals with approval_scope != simulated_only: 0
 - Approvals with broker_action_allowed != false: 0
 - Simulated submissions with broker_action_allowed != false: 0
+- Conservative warning reason: pending approvals remain in the queue
 
 ## Approval Queue Audit
 
@@ -52,7 +53,9 @@ Read-only audit report for manual approvals and simulated submissions.
 
 ## Simulated Submission Audit
 
-No simulated submissions were found. This is acceptable for this report.
+| simulated_submission_id | approval_id | candidate_id | order_plan_id | symbol | side | simulated_broker_order_id | submission_status | submitted_at | broker_action_allowed | audit_status | audit_notes |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| SS-APR-PTC-004-514ACD1054A0 | APR-PTC-004 | PTC-004 | OP-PTC-004 | NVDA | bullish | SIM-BROKER-PTC-004-6C52AADE56D6 | SIMULATED_SUBMITTED | 2026-05-25T23:06:59.189552+00:00 | false | pass | simulated submission record is present |
 
 ## Safety Boundary Audit
 
