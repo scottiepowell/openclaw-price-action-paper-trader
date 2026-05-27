@@ -14,6 +14,8 @@ from price_action_paper_trader.services.manual_approval_service import (
     validate_manual_approvals,
 )
 from price_action_paper_trader.services.approval_audit_report_service import generate_approval_audit_report
+from price_action_paper_trader.services.market_context_assessment_service import generate_market_context_assessment_report
+from price_action_paper_trader.services.market_data_snapshot_service import generate_market_data_snapshot_artifacts, generate_unavailable_snapshot_artifacts
 from price_action_paper_trader.services.order_plan_builder import build_order_plans
 from price_action_paper_trader.services.simulated_execution_journal_service import generate_simulated_execution_journal_artifacts
 from price_action_paper_trader.services.simulated_reconciliation_service import generate_simulated_reconciliation_artifacts
@@ -42,6 +44,19 @@ def _build_parser() -> argparse.ArgumentParser:
     )
     submit_parser.add_argument("--approval-id", required=True)
 
+    market_data_parser = subparsers.add_parser("market-data", help="read-only market data commands")
+    market_data_subparsers = market_data_parser.add_subparsers(dest="market_data_command")
+
+    snapshot_parser = market_data_subparsers.add_parser("snapshot", help="generate a delayed market-data snapshot")
+    snapshot_parser.add_argument("--symbols", default="", help="comma-separated symbols; defaults to current order-plan symbols")
+    snapshot_parser.add_argument("--timeframes", default="5Min", help="comma-separated timeframes")
+    snapshot_parser.add_argument("--delay-minutes", type=int, default=15)
+    snapshot_parser.add_argument("--provider", choices=["fake", "unavailable"], default="fake")
+
+    assess_parser = market_data_subparsers.add_parser("assess-context", help="generate a market context assessment report")
+    assess_parser.add_argument("--snapshot-root", default=None)
+    assess_parser.add_argument("--output-root", default=None)
+
     return parser
 
 
@@ -69,6 +84,60 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     if args.command != "approvals":
+        if args.command != "market-data":
+            parser.print_help()
+            return 0
+
+        if args.market_data_command == "snapshot":
+            symbols = [part.strip() for part in args.symbols.split(",") if part.strip()]
+            if not symbols:
+                symbols = [plan.symbol for plan in build_order_plans()]
+            timeframes = [part.strip() for part in args.timeframes.split(",") if part.strip()]
+            if args.provider == "unavailable":
+                report = generate_unavailable_snapshot_artifacts(
+                    symbols=symbols,
+                    timeframes=timeframes,
+                    delay_minutes=args.delay_minutes,
+                )
+            else:
+                report = generate_market_data_snapshot_artifacts(
+                    symbols=symbols,
+                    timeframes=timeframes,
+                    delay_minutes=args.delay_minutes,
+                )
+            print(
+                json.dumps(
+                    {
+                        "status": report["provider_status"],
+                        "count": report["count"],
+                        "snapshot_id": report["snapshot"].snapshot_id,
+                        "snapshot_markdown": str(report["queue_markdown"]),
+                        "snapshot_csv": str(report["queue_csv"]),
+                    },
+                    indent=2,
+                )
+            )
+            return 0
+
+        if args.market_data_command == "assess-context":
+            report = generate_market_context_assessment_report(
+                snapshot_root=args.snapshot_root,
+                output_root=args.output_root,
+            )
+            print(
+                json.dumps(
+                    {
+                        "status": report["report"].overall_status,
+                        "total_complete_traces": report["report"].total_complete_traces,
+                        "incomplete_traces": report["report"].incomplete_traces,
+                        "assessment_markdown": str(report["queue_markdown"]),
+                        "assessment_csv": str(report["queue_csv"]),
+                    },
+                    indent=2,
+                )
+            )
+            return 0
+
         parser.print_help()
         return 0
 
