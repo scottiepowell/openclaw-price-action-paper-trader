@@ -15,6 +15,8 @@ from price_action_paper_trader.services.manual_approval_service import (
 )
 from price_action_paper_trader.services.approval_audit_report_service import generate_approval_audit_report
 from price_action_paper_trader.services.order_plan_builder import build_order_plans
+from price_action_paper_trader.services.simulated_execution_journal_service import generate_simulated_execution_journal_artifacts
+from price_action_paper_trader.services.simulated_reconciliation_service import generate_simulated_reconciliation_artifacts
 from price_action_paper_trader.services.simulated_submission_service import (
     SIMULATED_SUBMITTED,
     generate_simulated_submission_artifacts,
@@ -32,6 +34,7 @@ def _build_parser() -> argparse.ArgumentParser:
     approvals_subparsers.add_parser("list", help="list manual approval templates")
     approvals_subparsers.add_parser("validate", help="validate manual approval templates")
     approvals_subparsers.add_parser("audit-report", help="generate read-only approval audit report")
+    approvals_subparsers.add_parser("reconcile-simulated", help="generate simulated journal and reconciliation reports")
 
     submit_parser = approvals_subparsers.add_parser(
         "submit-simulated",
@@ -101,6 +104,25 @@ def main(argv: list[str] | None = None) -> int:
             )
         )
         return 0
+
+    if args.approvals_command == "reconcile-simulated":
+        journal_report = generate_simulated_execution_journal_artifacts()
+        reconciliation_report = generate_simulated_reconciliation_artifacts()
+        payload = {
+            "status": reconciliation_report["report"].overall_status,
+            "journal_status": journal_report["report"].overall_status,
+            "journal_count": journal_report["count"],
+            "reconciliation_count": reconciliation_report["count"],
+            "journal_markdown": str(journal_report["queue_markdown"]),
+            "journal_csv": str(journal_report["queue_csv"]),
+            "reconciliation_markdown": str(reconciliation_report["queue_markdown"]),
+            "reconciliation_csv": str(reconciliation_report["queue_csv"]),
+            "missing_submission_records": reconciliation_report["report"].missing_submission_records,
+            "missing_journal_records": reconciliation_report["report"].missing_journal_records,
+            "mismatched_records": reconciliation_report["report"].mismatched_records,
+        }
+        print(json.dumps(payload, indent=2))
+        return 0 if reconciliation_report["report"].overall_status == "pass" else 1
 
     if args.approvals_command == "submit-simulated":
         approvals = load_manual_approval_queue()
